@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+
+<style>
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #872657;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+{% block body%}
+
+
+<div id="login" style="display: none">
+
+<br><br><br><br>
+
+<h1> Welcome to Flack! </h1><br><br>
+<h3> Display Name </h3> <br>
+
+<h6> Choose a Display Name and start chatting instantly!</h6> <br>
+
+<form id="login" action="/" method="POST">
+  <div class="form-group">
+    <label for="Username">Display name</label>
+    <input autocomplete="off" autofocus type="text" class="form-control" id="displayName" name="displayName" placeholder="Display Name">
+
+  </div>
+  <button type="submit" id="submit" class="btn btn-primary">Log In</button>
+</form>
+</div>
+
+
+<div class="main" id="welcome" style="display: none">
+
+<br><br><br>
+
+<h1> Welcome {{ name}} </h1>
+<button id="logout"> log out </button>
+
+<h3>Create New Channel</h3><br>
+
+<form action="/create" method="POST">
+	<div class="form-group">
+		<input type="text" autofocus name="channel" placeholder="Channel Name" class="form-control">
+		<button type="submit" class="btn btn-primary"> Create</button>
+	</div>
+
+</form>
+#check if channel does not already exist(use global variable)
+#show list of current channels.
+#each list is a link to particular channel
+
+
+</div>
+
+{% endblock %}

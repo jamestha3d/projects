@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://d3js.org/d3.v4.min.js"></script>
+	<title> Loading. . .</title>
+</head>
+<body>
+	<svg id="svg" style="width:100%; height:800px"/>
+	<!-- use animation and svg to create a loading page
+
+		perhaps a spinning circle-->
+
+</body>
+	<script>
+		var svg = d3.select("#svg");
+
+function circleTransition() { 
+
+    var timeCircle = svg.append("circle")
+        .attr("fill", "steelblue")
+        .attr("r", 20);
+    repeat();
+    
+    function repeat() {
+      timeCircle
+        .attr('cx', 40)      // position the circle at 40 on the x axis
+        .attr('cy', 250)     // position the circle at 250 on the y axis
+        .transition()        // apply a transition
+        .duration(2000)      // apply it over 2000 milliseconds
+        .attr('cx', 920)     // move the circle to 920 on the x axis
+        .transition()        // apply a transition
+        .duration(2000)      // apply it over 2000 milliseconds
+        .attr('cx', 40)      // return the circle to 40 on the x axis
+        .on("end", repeat);  // when the transition finishes start again
+    };
+
+};
+
+circleTransition();
+
+	</script>
+</html>

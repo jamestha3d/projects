@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://d3js.org/d3.v4.min.js"></script>
+	<title> Loading. . .</title>
+	<style>
+
+		@keyframes swivel{
+			from {
+				opacity: 1;
+			}
+			to {
+				opacity: 0.5;
+			}
+		}
+
+		#svg{
+			animation-name: swivel;
+			animation-duration: 5s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
+		}
+	</style>
+</head>
+<body>
+	<svg id="svg" style="width:100%; height:800px"/>
+	<!-- use animation and svg to create a loading page
+
+		perhaps a spinning circle-->
+
+</body>
+	<script>
+		const svg = d3.select('#svg')
+					.
+
+		const c = svg.append('circle')
+					.attr('cx', 200)
+					.attr('cy', 300)
+					.attr('r', 90)
+					.style('fill', 'green');
+
+		c.transition()
+		.duration(2500)
+		.attr('cx', 800)
+		.attr('cy', 300)
+		.style('fill', 'red');
+		
+
+	</script>
+</html>
