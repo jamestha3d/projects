@@ -5,14 +5,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		const name = document.querySelector('#displayName').value;
 
-		alert(name);
+		//alert(name);
 
 
 		localStorage.setItem('displayName', name);
 
-
+		alert(localStorage.getItem('displayName'));
 
 		return false;
 	}; 
+
+	
 });
 
