@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Log In
+{% endblock %}
+
+{%block body%}
+
+<br><br><br>
+<h1> Display Name </h1> <br>
+
+<h6> Choose a display Name and start chatting instantly!</h6> <br>
+
+<form id="login">
+  <div class="form-group">
+    <label for="Username">Display name</label>
+    <input autocomplete="off" autofocus type="text" class="form-control" id="displayName" name="username" placeholder="Display Name">
+
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input autocomplete="off" type="password" class="form-control" name="password" placeholder="Password">
+  </div>
+  <button type="submit" id="submit" class="btn btn-primary">Log In</button>
+</form>
+{% endblock %}
