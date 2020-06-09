@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="/static/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
     <script src="{{url_for('static', filename='flack.js')}}"></script>
     {% block head %} {% endblock %}
     <title> {% block title %} {% endblock %}</title>
@@ -19,11 +20,11 @@
     <div class="sidenav">
       <a> Channels </a><br>
       <a></a>
-      {% for channel in channels %}
-      <a href="{{url_for('channel', channel=channel)}}"> {{channel}}</a>
-      {% else %}
-      <span> You have no channels</span>
-      {% endfor %}
+      <hr>
+      <ul id="channels">
+      </ul>
+
+
     </div>
 
     <!-- main body -->

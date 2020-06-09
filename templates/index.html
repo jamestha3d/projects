@@ -46,8 +46,10 @@
 
 {% block body%}
 
+<!-- LOGGED OUT -->
 
-<div id="login" style="display: none">
+
+<div class= "main" id="login" style="display: none">
 
 <br><br><br><br>
 
@@ -56,7 +58,7 @@
 
 <h6> Choose a Display Name and start chatting instantly!</h6> <br>
 
-<form id="login" action="/" method="POST">
+<form id="login">
   <div class="form-group">
     <label for="Username">Display name</label>
     <input autocomplete="off" autofocus type="text" class="form-control" id="displayName" name="displayName" placeholder="Display Name">
@@ -67,26 +69,21 @@
 </div>
 
 
+<!-- LOGGED IN-->
+
 <div class="main" id="welcome" style="display: none">
 
-<br><br><br>
+<br><br><br><br>
 
-<h1> Welcome {{ name}} </h1>
-<button id="logout"> log out </button>
+<h1> Welcome <a id="greet"></a></h1>
+
+<a id="logout" href=""> log out </a><br><br>
 
 <h3>Create New Channel</h3><br>
-
-<form action="/create" method="POST">
-	<div class="form-group">
-		<input type="text" autofocus name="channel" placeholder="Channel Name" class="form-control">
-		<button type="submit" class="btn btn-primary"> Create</button>
-	</div>
-
-</form>
-#check if channel does not already exist(use global variable)
-#show list of current channels.
-#each list is a link to particular channel
-
+<div>
+	<input id="channel" type="text" autofocus name="channel" placeholder="Channel Name" class="form-control">
+	<button id="create" type="submit" class="btn btn-primary"> Create</button>
+</div>
 
 </div>
 
