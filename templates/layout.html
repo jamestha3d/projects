@@ -22,6 +22,11 @@
       <a></a>
       <hr>
       <ul id="channels">
+        {% for channel in channels %}
+        <li> <a href="{{ url_for('channel', info=channel) }}">{{channel}}</a></li>
+        {% else %}
+        <li> No Channel</li>
+        {% endfor %}
       </ul>
 
 

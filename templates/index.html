@@ -48,20 +48,25 @@
 
 <!-- LOGGED OUT -->
 
+<div class="main">
 
-<div class= "main" id="login" style="display: none">
+  <a id="server"></a>
+
+
+<div id="login" style="display: none">
 
 <br><br><br><br>
 
 <h1> Welcome to Flack! </h1><br><br>
 <h3> Display Name </h3> <br>
 
+
 <h6> Choose a Display Name and start chatting instantly!</h6> <br>
 
 <form id="login">
   <div class="form-group">
     <label for="Username">Display name</label>
-    <input autocomplete="off" autofocus type="text" class="form-control" id="displayName" name="displayName" placeholder="Display Name">
+    <input autofocus type="text" class="form-control" id="displayName" name="displayName" placeholder="Display Name">
 
   </div>
   <button type="submit" id="submit" class="btn btn-primary">Log In</button>
@@ -69,9 +74,10 @@
 </div>
 
 
+
 <!-- LOGGED IN-->
 
-<div class="main" id="welcome" style="display: none">
+<div id="welcome" style="display: none">
 
 <br><br><br><br>
 
@@ -80,11 +86,16 @@
 <a id="logout" href=""> log out </a><br><br>
 
 <h3>Create New Channel</h3><br>
+
 <div>
 	<input id="channel" type="text" autofocus name="channel" placeholder="Channel Name" class="form-control">
 	<button id="create" type="submit" class="btn btn-primary"> Create</button>
 </div>
 
+
 </div>
+
+</div>
+
 
 {% endblock %}
